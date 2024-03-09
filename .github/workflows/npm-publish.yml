@@ -1,32 +1,23 @@
-name: Build and Publish
+name: Build Package
 
 on:
-  push:
-    branches:
-      - main
-    tags:
-      - 'v*'
+  release:
+    types: [released]
 
 jobs:
-  build-and-publish:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '18'
-          registry-url: 'https://registry.npmjs.org'
-          
-      - name: Install Dependencies with Legacy Peer Deps
-        run: npm install --legacy-peer-deps
-
-      - name: Build
-        run: yarn tsc
-        
-      - name: Publish to npm
-        run: npm publish
-        env:
+    - name: Checkout repository
+      uses: actions/checkout@main
+    - name: Set up Node.js
+      uses: actions/setup-node@main
+      with:
+        node-version: 20.x
+        registry-url: https://registry.npmjs.org/
+    - run: yarn install
+    - run: yarn tsc
+    - run: yarn build
+    - run: npm publish
+      env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
