@@ -23,5 +23,4 @@ If you encounter any issues or have questions, please file an issue on the GitHu
 
 ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
-
+Distributed under the MIT License. 
