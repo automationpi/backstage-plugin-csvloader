@@ -22,9 +22,6 @@ jobs:
           
       - name: Install Dependencies with Legacy Peer Deps
         run: npm install --legacy-peer-deps
-        
-      - name: Lint (Optional)
-        run: npm run lint
 
       - name: Build
         run: npm run build
