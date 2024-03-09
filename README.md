@@ -4,65 +4,18 @@
 This is a plugin which can parse any csv file and present it to backstage. Here is an example using this plugin: The Backstage Onboarding Tasks Plugin is designed to streamline the onboarding process for new employees within an organization. By fetching onboarding tasks from a CSV file hosted on GitHub, this plugin provides a dynamic, easy-to-update mechanism for administrators to manage and for new employees to access their onboarding tasks directly within Backstage.
 
 ## Features
+![2024-03-10 00_11_45-Onboarding tsx - onboardinglist  WSL_ Ubuntu-22 04  - Visual Studio Code](https://github.com/automationpi/backstage-plugin-csvloader/assets/82222256/b9011db9-bcb7-4033-81fb-9a5c49ca6eed)
 
-- **Dynamic Task Loading**: Fetches onboarding tasks from a CSV file hosted on GitHub, ensuring easy updates and management.
-- **Task Display**: Presents tasks in an organized, user-friendly interface within Backstage.
-- **Progress Tracking**: Allows new employees to mark tasks as completed, offering visual feedback on their progress.
+- **Dynamic CSV Task Loading**: This plugin can parse any CSV file and present it within Backstage. This ensures easy updates and management of onboarding tasks, making it a dynamic solution for onboarding new employees.
+
+- **User-Friendly Task Display**: The plugin presents tasks in an organized, user-friendly interface within Backstage, making it easy for new employees to access and complete their onboarding tasks.
 
 ## Getting Started
+To use the Backstage CSV Onboarding Tasks Plugin, follow these steps:
 
-To integrate the Onboarding Tasks Plugin into your Backstage instance, follow these steps:
-
-### Prerequisites
-
-Ensure you have a running Backstage application. If not, follow the Backstage [Getting Started](https://backstage.io/docs/getting-started/) guide to create one.
-
-### Installation
-
-1. Clone this plugin repository into your Backstage app's `plugins` directory:
-
-```bash
-git clone https://github.com/your-organization/backstage-onboarding-tasks-plugin.git plugins/onboarding-tasks
-```
-
-2. Add the plugin to your app's `packages/app/src/plugins.ts`:
-
-```typescript
-export { plugin as OnboardingTasks } from '@your-organization/onboarding-tasks';
-```
-
-3. Integrate the plugin component into your Backstage app, for example, by adding it to the `App.tsx` routing:
-
-```jsx
-import { OnboardingTasksPage } from '@your-organization/onboarding-tasks';
-
-// Inside your App component's Router
-<Route path="/onboarding-tasks" element={<OnboardingTasksPage />} />
-```
-
-### Configuration
-
-Configure the plugin by setting the URL to your CSV file in the plugin's configuration file:
-
-```yaml
-onboardingTasks:
-  csvUrl: 'https://raw.githubusercontent.com/your-username/your-repo/main/onboarding-tasks.csv'
-```
-
-Ensure your CSV file is structured correctly, with columns for `Title`, `Role`, and `Description`.
-
-## Usage
-
-Once installed and configured, navigate to `/onboarding-tasks` in your Backstage instance to view and interact with the onboarding tasks.
-
-## Contributing
-
-Contributions are welcome! If you'd like to improve the Onboarding Tasks Plugin, please follow our contribution guidelines:
-
-1. Fork the repository and create your feature branch: `git checkout -b feature/AmazingFeature`.
-2. Commit your changes: `git commit -m 'Add some AmazingFeature'`.
-3. Push to the branch: `git push origin feature/AmazingFeature`.
-4. Open a pull request against the main branch.
+1. Install the plugin in your Backstage app.
+2. Host your CSV file with the onboarding tasks on GitHub.
+3. Configure the plugin to fetch tasks from your CSV file.
 
 ## Support
 
