@@ -1,5 +1,4 @@
 import React from 'react';
-import { ExampleComponent } from './Onboarding';
 import { rest } from 'msw';
 import { setupServer } from 'msw/node';
 import { screen } from '@testing-library/react';
@@ -21,7 +20,6 @@ describe('ExampleComponent', () => {
   });
 
   it('should render', async () => {
-    await renderInTestApp(<ExampleComponent />);
-    expect(screen.getByText('Welcome to onboardinglist!')).toBeInTheDocument();
+    expect(screen.getByText('Welcome Naveen')).toBeInTheDocument();
   });
 });
