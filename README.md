@@ -1,4 +1,4 @@
-# Backstage Onboarding Tasks Plugin
+# Backstage CSV Loader Plugin
 
 ## Overview
 This is a plugin which can parse any csv file and present it to backstage. Here is an example using this plugin: The Backstage Onboarding Tasks Plugin is designed to streamline the onboarding process for new employees within an organization. By fetching onboarding tasks from a CSV file hosted on GitHub, this plugin provides a dynamic, easy-to-update mechanism for administrators to manage and for new employees to access their onboarding tasks directly within Backstage.
