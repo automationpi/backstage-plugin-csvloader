@@ -3,23 +3,29 @@ import { Typography, TextField, Button, FormControl, InputLabel, Select, MenuIte
 import { useApi, storageApiRef } from '@backstage/core-plugin-api';
 import Papa from 'papaparse';
 
+interface DataItem {
+    role: string;
+    [key: string]: any;
+}
+
+
 export const YamlFetchComponent = () => {
     const [inputUrl, setInputUrl] = useState('');
     const [storedUrl, setStoredUrl] = useState('');
-    const [data, setData] = useState([]);
+    const [data, setData] = useState<DataItem[]>([]);
     const [selectedRole, setSelectedRole] = useState('');
-    const [headers, setHeaders] = useState([]);
+    const [headers, setHeaders] = useState<string[]>([]);
     const [showUrl, setShowUrl] = useState(false);
     const storageApi = useApi(storageApiRef);
 
-    const isValidGithubUrl = (url) => {
+    const isValidGithubUrl = (url: string) => {
         const pattern = /^https:\/\/github\.com\/[^\/]+\/[^\/]+\/.+/;
         return pattern.test(url);
     };
 
     useEffect(() => {
         const fetchStoredUrlAndData = async () => {
-            const url = await storageApi.get('csvUrl');
+            const url = await (storageApi as any).get('csvUrl');
             setStoredUrl(url || '');
             if (url) {
                 const fetchUrl = convertToRawGithubUrl(url);
@@ -55,17 +61,22 @@ export const YamlFetchComponent = () => {
 
     const fetchCsvData = async (url: string) => {
         console.log('Fetching CSV data from: ', url);
+        type DataItem = {
+            role: string;
+            // Add other properties here
+        };
+
         try {
             const response = await fetch(url);
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             const csvData = await response.text();
-            const result = Papa.parse(csvData, { header: true });
-            setData(result.data);
+            const result = Papa.parse<DataItem>(csvData, { header: true });
+            setData(result.data as DataItem[]);
             if (result.data.length > 0) {
                 setSelectedRole(result.data[0].role || '');
-                setHeaders(Object.keys(result.data[0]));
+                setHeaders([...Object.keys(result.data[0])]);
             }
         } catch (error) {
             console.error('Fetch error: ', error);
@@ -115,7 +126,7 @@ export const YamlFetchComponent = () => {
                     <Select
                         labelId="role-label"
                         value={selectedRole}
-                        onChange={event => setSelectedRole(event.target.value)}
+                        onChange={(event: React.ChangeEvent<{ name?: string | undefined; value: unknown }>) => setSelectedRole(event.target.value as string)}
                         label="Filter"
                     >
                         {roles.map((role, index) => (
