@@ -7,7 +7,7 @@ import {
   renderInTestApp,
 } from "@backstage/test-utils";
 
-describe('ExampleComponent', () => {
+describe('Onboarding', () => {
   const server = setupServer();
   // Enable sane handlers for network requests
   setupRequestMockHandlers(server);
