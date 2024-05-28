@@ -1,0 +1,50 @@
+onboarding:
+  organization:
+    checklists:
+      - title: "Complete HR Orientation"
+        tasks:
+          - "Watch HR Orientation Video"
+          - "Complete HR Forms"
+    access:
+      - "Email: Setup corporate email"
+      - "HR System: Access to HR portal"
+  projects:
+    - name: "Project Alpha"
+      checklists:
+        - title: "Setup Development Environment"
+          tasks:
+            - "Install VS Code"
+            - "Setup Git"
+            - "Clone Project Repository"
+      access:
+        - "Jira: Add to Project Alpha"
+        - "Confluence: Add to Project Alpha Space"
+        - "Slack: Invite to Project Alpha Channel"
+    - name: "Project Beta"
+      checklists:
+        - title: "Setup Data Analysis Environment"
+          tasks:
+            - "Install Python"
+            - "Setup Jupyter Notebook"
+            - "Clone Data Repository"
+      access:
+        - "Jira: Add to Project Beta"
+        - "Confluence: Add to Project Beta Space"
+        - "Slack: Invite to Project Beta Channel"
+  roles:
+    - role: "Developer"
+      checklists:
+        - title: "Developer Tools Setup"
+          tasks:
+            - "Install IDE"
+            - "Configure Version Control"
+        access:
+          - "GitHub: Access to Repositories"
+    - role: "Data Scientist"
+      checklists:
+        - title: "Data Tools Setup"
+          tasks:
+            - "Install Data Analysis Tools"
+            - "Setup Data Access"
+        access:
+          - "Database: Access to Data Warehouse"
