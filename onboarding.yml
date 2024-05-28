@@ -38,13 +38,13 @@ onboarding:
           tasks:
             - "Install IDE"
             - "Configure Version Control"
-        access:
-          - "GitHub: Access to Repositories"
+      access:
+        - "GitHub: Access to Repositories"
     - role: "Data Scientist"
       checklists:
         - title: "Data Tools Setup"
           tasks:
             - "Install Data Analysis Tools"
             - "Setup Data Access"
-        access:
-          - "Database: Access to Data Warehouse"
+      access:
+        - "Database: Access to Data Warehouse"
