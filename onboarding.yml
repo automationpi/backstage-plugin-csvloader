@@ -5,20 +5,26 @@ onboarding:
         tasks:
           - task: "Watch HR Orientation Video"
             link: "https://example.com/hr-orientation-video"
+            description: "This video provides an overview of HR policies."
           - task: "Complete HR Forms"
             link: "https://example.com/hr-forms"
     access:
       - item: "Email: Setup corporate email"
         link: "https://example.com/email-setup"
+        description: "Instructions for setting up your corporate email."
       - item: "HR System: Access to HR portal"
         link: "https://example.com/hr-portal"
+        description: "Access to the HR portal for managing personal details."
     internal_sites:
       - item: "Leave Application"
         link: "https://example.com/leave-application"
+        description: "Portal to apply for leaves."
       - item: "Compensation Information"
         link: "https://example.com/compensation-info"
+        description: "Details about compensation and benefits."
       - item: "Learning and Training Portal"
         link: "https://example.com/training-portal"
+        description: "Access to training materials and courses."
   projects:
     - name: "Project Alpha"
       checklists:
@@ -26,8 +32,10 @@ onboarding:
           tasks:
             - task: "Install VS Code"
               link: "https://code.visualstudio.com/"
+              description: "Install Visual Studio Code for development."
             - task: "Setup Git"
               link: "https://git-scm.com/"
+              description: "Set up Git for version control."
             - task: "Clone Project Repository"
       access:
         - item: "Jira: Add to Project Alpha"
