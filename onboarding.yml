@@ -12,6 +12,13 @@ onboarding:
         link: "https://example.com/email-setup"
       - item: "HR System: Access to HR portal"
         link: "https://example.com/hr-portal"
+    internal_sites:
+      - item: "Leave Application"
+        link: "https://example.com/leave-application"
+      - item: "Compensation Information"
+        link: "https://example.com/compensation-info"
+      - item: "Learning and Training Portal"
+        link: "https://example.com/training-portal"
   projects:
     - name: "Project Alpha"
       checklists:
