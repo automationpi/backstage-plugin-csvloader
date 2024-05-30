@@ -1,4 +1,4 @@
-organization_ref: "https://github.com/automationpi/backstage-plugin-csvloader/blob/1e4c786fefe776f80a37281e239049cf32af9725/organization.yml"
+organization_ref: "https://raw.githubusercontent.com/your-org/your-repo/main/organization.yaml"
 projects:
   - name: "Project Alpha"
     checklists:
