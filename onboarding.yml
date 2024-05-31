@@ -1,57 +1,76 @@
-projects:
-  - name: "Project Alpha"
+onboarding:
+  organization:
     checklists:
-      - title: "Setup Development Environment"
+      - title: "Complete HR Orientation"
         tasks:
-          - task: "Install VS Code"
-            link: "https://code.visualstudio.com/"
-            description: "Install Visual Studio Code for development."
-          - task: "Setup Git"
-            link: "https://git-scm.com/"
-            description: "Set up Git for version control."
-          - task: "Clone Project Repository"
+          - task: "Watch HR Orientation Video"
+            link: "https://example.com/hr-orientation-video"
+          - task: "Complete HR Forms"
+            link: "https://example.com/hr-forms"
     access:
-      - item: "Jira: Add to Project Alpha"
-        link: "https://jira.example.com"
-      - item: "Confluence: Add to Project Alpha Space"
-        link: "https://confluence.example.com"
-      - item: "Slack: Invite to Project Alpha Channel"
-        link: "https://slack.example.com"
-  - name: "Project Beta"
-    checklists:
-      - title: "Setup Data Analysis Environment"
-        tasks:
-          - task: "Install Python"
-            link: "https://www.python.org/"
-          - task: "Setup Jupyter Notebook"
-            link: "https://jupyter.org/"
-          - task: "Clone Data Repository"
-    access:
-      - item: "Jira: Add to Project Beta"
-        link: "https://jira.example.com"
-      - item: "Confluence: Add to Project Beta Space"
-        link: "https://confluence.example.com"
-      - item: "Slack: Invite to Project Beta Channel"
-        link: "https://slack.example.com"
-roles:
-  - role: "Developer"
-    checklists:
-      - title: "Developer Tools Setup"
-        tasks:
-          - task: "Install IDE"
-            link: "https://www.jetbrains.com/idea/"
-          - task: "Configure Version Control"
-            link: "https://git-scm.com/"
-    access:
-      - item: "GitHub: Access to Repositories"
-        link: "https://github.com/"
-  - role: "Data Scientist"
-    checklists:
-      - title: "Data Tools Setup"
-        tasks:
-          - task: "Install Data Analysis Tools"
-            link: "https://www.anaconda.com/"
-          - task: "Setup Data Access"
-    access:
-      - item: "Database: Access to Data Warehouse"
-        link: "https://example.com/data-warehouse"
+      - item: "Email: Setup corporate email"
+        link: "https://example.com/email-setup"
+      - item: "HR System: Access to HR portal"
+        link: "https://example.com/hr-portal"
+    internal_sites:
+      - item: "Leave Application"
+        link: "https://example.com/leave-application"
+      - item: "Compensation Information"
+        link: "https://example.com/compensation-info"
+      - item: "Learning and Training Portal"
+        link: "https://example.com/training-portal"
+  projects:
+    - name: "Project Alpha"
+      checklists:
+        - title: "Setup Development Environment"
+          tasks:
+            - task: "Install VS Code"
+              link: "https://code.visualstudio.com/"
+            - task: "Setup Git"
+              link: "https://git-scm.com/"
+            - task: "Clone Project Repository"
+      access:
+        - item: "Jira: Add to Project Alpha"
+          link: "https://jira.example.com"
+        - item: "Confluence: Add to Project Alpha Space"
+          link: "https://confluence.example.com"
+        - item: "Slack: Invite to Project Alpha Channel"
+          link: "https://slack.example.com"
+    - name: "Project Beta"
+      checklists:
+        - title: "Setup Data Analysis Environment"
+          tasks:
+            - task: "Install Python"
+              link: "https://www.python.org/"
+            - task: "Setup Jupyter Notebook"
+              link: "https://jupyter.org/"
+            - task: "Clone Data Repository"
+      access:
+        - item: "Jira: Add to Project Beta"
+          link: "https://jira.example.com"
+        - item: "Confluence: Add to Project Beta Space"
+          link: "https://confluence.example.com"
+        - item: "Slack: Invite to Project Beta Channel"
+          link: "https://slack.example.com"
+  roles:
+    - role: "Developer"
+      checklists:
+        - title: "Developer Tools Setup"
+          tasks:
+            - task: "Install IDE"
+              link: "https://www.jetbrains.com/idea/"
+            - task: "Configure Version Control"
+              link: "https://git-scm.com/"
+      access:
+        - item: "GitHub: Access to Repositories"
+          link: "https://github.com/"
+    - role: "Data Scientist"
+      checklists:
+        - title: "Data Tools Setup"
+          tasks:
+            - task: "Install Data Analysis Tools"
+              link: "https://www.anaconda.com/"
+            - task: "Setup Data Access"
+      access:
+        - item: "Database: Access to Data Warehouse"
+          link: "https://example.com/data-warehouse"
