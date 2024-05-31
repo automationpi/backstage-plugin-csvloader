@@ -76,3 +76,13 @@ onboarding:
       access:
         - item: "Database: Access to Data Warehouse"
           link: "https://example.com/data-warehouse"
+    - role: "Tester"
+      checklists:
+        - title: "Data Tools Setup"
+          tasks:
+            - task: "Install Test Tools"
+              link: "https://www.anaconda.com/"
+            - task: "Setup tool Access"
+      access:
+        - item: "Database: Access to Data base for testing"
+          link: "https://example.com/"
