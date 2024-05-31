@@ -1,4 +1,4 @@
-organization_ref: "https://github.com/automationpi/backstage-plugin-csvloader/blob/a19487034f1f87508af42c7bd9e82a1c340d758f/organization.yml"
+organization_ref: "https://raw.githubusercontent.com/your-org/your-repo/main/organization.yaml"
 projects:
   - name: "Project Alpha"
     checklists:
@@ -11,6 +11,7 @@ projects:
             link: "https://git-scm.com/"
             description: "Set up Git for version control."
           - task: "Clone Project Repository"
+            description: "Clone the repository for Project Alpha."
     access:
       - item: "Jira: Add to Project Alpha"
         link: "https://jira.example.com"
@@ -27,6 +28,7 @@ projects:
           - task: "Setup Jupyter Notebook"
             link: "https://jupyter.org/"
           - task: "Clone Data Repository"
+            description: "Clone the repository for data analysis."
     access:
       - item: "Jira: Add to Project Beta"
         link: "https://jira.example.com"
@@ -53,6 +55,7 @@ roles:
           - task: "Install Data Analysis Tools"
             link: "https://www.anaconda.com/"
           - task: "Setup Data Access"
+            description: "Configure access to the data warehouse."
     access:
       - item: "Database: Access to Data Warehouse"
         link: "https://example.com/data-warehouse"
