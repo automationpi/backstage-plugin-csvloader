@@ -1,7 +1,6 @@
 onboarding:
-  page:
-    header: "Welcome to the Onboarding Portal"
-    title: "Onboarding Data"
+  page_header: "Welcome to Onboarding"
+  page_title: "Onboarding Data"
   organization:
     checklists:
       - title: "Complete HR Orientation"
