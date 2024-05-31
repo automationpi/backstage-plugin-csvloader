@@ -7,14 +7,13 @@ organization:
           description: "This video provides an overview of HR policies."
         - task: "Complete HR Forms"
           link: "https://example.com/hr-forms"
-          description: "Complete all necessary HR forms."
   access:
     - item: "Email: Setup corporate email"
       link: "https://example.com/email-setup"
       description: "Instructions for setting up your corporate email."
     - item: "HR System: Access to HR portal"
       link: "https://example.com/hr-portal"
-      description: "Access the HR portal for managing your details."
+      description: "Access to the HR portal for managing personal details."
   internal_sites:
     - item: "Leave Application"
       link: "https://example.com/leave-application"
