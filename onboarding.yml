@@ -54,6 +54,22 @@ onboarding:
           link: "https://confluence.example.com"
         - item: "Slack: Invite to Project Beta Channel"
           link: "https://slack.example.com"
+    - name: "Project Gama"
+      checklists:
+        - title: "Setup Data Analysis Environment"
+          tasks:
+            - task: "Install Python"
+              link: "https://www.python.org/"
+            - task: "Setup Jupyter Notebook"
+              link: "https://jupyter.org/"
+            - task: "Clone Data Repository"
+      access:
+        - item: "Jira: Add to Project Beta"
+          link: "https://jira.example.com"
+        - item: "Confluence: Add to Project Beta Space"
+          link: "https://confluence.example.com"
+        - item: "Slack: Invite to Project Beta Channel"
+          link: "https://slack.example.com"
   roles:
     - role: "Developer"
       checklists:
